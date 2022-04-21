@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".categorias">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/txtTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="104dp"
+                android:text="0"
+                android:textSize="30sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txtMedidorTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ML"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/txtTotal"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/oswaldfont"
+                android:padding="10dp"
+                android:text="@string/garrafa"
+                android:textAllCaps="true"
+                android:textSize="30sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@color/teal_200"
+            android:padding="10dp"
+            android:layout_margin="10dp">
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_alignParentRight="true"
+                android:contentDescription="Garrafa D/água"
+                android:src="@drawable/ml500" />
+
+            <TextView
+                android:id="@+id/txt500ml"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="41dp"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/oswaldfont"
+                android:text="500ml"
+                android:textColor="@color/white"
+                android:textSize="25sp" />
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn500ml"
+                style="?attr/materialButtonOutlinedStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:text="@string/btngarrafa"
+                android:textColor="@color/white"
+                app:strokeColor="@color/white" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            android:background="@color/teal_200">
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_alignParentRight="true"
+                android:contentDescription="Garrafa D/água"
+                android:src="@drawable/ml500" />
+
+            <TextView
+                android:id="@+id/txt700ml"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="700ml"
+                android:fontFamily="@font/oswaldfont"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="41dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn700ml"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="?attr/materialButtonOutlinedStyle"
+                android:text="@string/btngarrafa"
+                android:textColor="@color/white"
+                app:strokeColor="@color/white"
+                android:layout_alignParentBottom="true"/>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            android:background="@color/teal_200">
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ml500"
+                android:contentDescription="Garrafa D/água" />
+
+            <TextView
+                android:id="@+id/txt1l"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1Litro"
+                android:fontFamily="@font/oswaldfont"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="41dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn1l"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="?attr/materialButtonOutlinedStyle"
+                android:text="@string/btngarrafa"
+                android:textColor="@color/white"
+                app:strokeColor="@color/white"
+                android:layout_alignParentBottom="true"/>
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</ScrollView>
