@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+  <group>
+      <item android:id="@+id/nav_garrafas"
+          android:icon="@drawable/ic_baseline_hourglass_bottom_24"
+          android:title="Garrafas"
+          />
+
+      <item android:id="@+id/nav_sobre"
+          android:icon="@drawable/ic_baseline_info_24"
+          android:title="Sobre"
+          />
+
+
+      <item android:id="@+id/nav_sair"
+          android:icon="@drawable/ic_baseline_exit_to_app_24"
+          android:title="Sair"
+          />
+  </group>
+</menu>

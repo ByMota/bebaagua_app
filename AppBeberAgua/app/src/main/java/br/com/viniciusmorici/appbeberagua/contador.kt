@@ -28,7 +28,8 @@ class contador : AppCompatActivity() {
                 txtCont.text = addMl.toString()
                 if (txtCont.text.toString().toInt() >= 1000){
                     txtMedidor.text = "L"
-                }
+
+                                    }
             }
         }else if (idBtn == 2){
             val litragem = args?.getString("700ml")

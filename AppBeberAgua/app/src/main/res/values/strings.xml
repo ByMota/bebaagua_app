@@ -3,4 +3,6 @@
     <string name="iniciar">começar</string>
     <string name="btngarrafa">Vou tomar essa</string>
     <string name="garrafa">garrafas</string>
+    <string name="navigation_drawer_open">Aberto</string>
+    <string name="navigation_drawer_close">fechado</string>
 </resources>
