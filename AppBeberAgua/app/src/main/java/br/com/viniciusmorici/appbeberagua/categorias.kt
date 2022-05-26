@@ -29,11 +29,12 @@ class categorias : AppCompatActivity(), NavigationView.OnNavigationItemSelectedL
         configuraMenuLateral()
 
         val params = Bundle()
-        var idBtn = 0
-        var resultadoMl = 0.0
+
+        var resultadoMl = 0.0 // var para o total de litros a ser tomado
+        var addMl = Prefs.getString("lembrarTotal").toInt()// adiciona os litros
 
         calcularIngestao = CalcularIngestaoDiaria()
-
+        // calcula os litros a serem tomados
         btnCalcular.setOnClickListener {
             if (editPeso.text.isEmpty()){
                 Toast.makeText(context, "Informe o peso", Toast.LENGTH_SHORT).show()
@@ -51,39 +52,40 @@ class categorias : AppCompatActivity(), NavigationView.OnNavigationItemSelectedL
             }
         }
 
+        //escolhe qual garrafa vai tomar
         btn500ml.setOnClickListener {
-            idBtn = 1
-            val intent = Intent(this, contador::class.java)
-            params.putString("500ml", "500ml")
-            params.putInt("id_btn", idBtn)
-            intent.putExtras(params)
-            startActivity(intent)
-
+            addMl += 500
+            Prefs.setString("lembrarTotal", addMl.toString())
+            txtTotal.setText(addMl.toString())
         }
-        btn700ml.setOnClickListener {
-            idBtn = 2
-            val intent = Intent(this, contador::class.java)
-            params.putString("700ml", "700ml")
-            params.putInt("id_btn", idBtn)
-            intent.putExtras(params)
-            startActivity(intent)
 
+        btn700ml.setOnClickListener {
+            addMl += 700
+            Prefs.setString("lembrarTotal", addMl.toString())
+            txtTotal.setText(addMl.toString())
         }
         btn1l.setOnClickListener {
-            idBtn = 3
-            val intent = Intent(this, contador::class.java)
-            params.putString("1l", "1Litro")
-            params.putInt("id_btn", idBtn)
-            intent.putExtras(params)
-            startActivity(intent)
-
+            addMl += 1000
+            Prefs.setString("lembrarTotal", addMl.toString())
+            txtTotal.setText(addMl.toString())
+        }
+        btnReset.setOnClickListener {
+            addMl = 0
+            Prefs.setString("lembrarTotal", addMl.toString())
+            txtTotal.setText(addMl.toString())
         }
 
-        val args = intent.extras
-        val total = args?.getInt("totalCont", 0)
-        txtTotal.text = total.toString()
 
+        var lembrarTotalLitros = Prefs.getString("lembrarTotal")
+        txtTotal.setText(lembrarTotalLitros)
 
+        if (txtTotal.text.toString().toInt() >= 1000){
+            txtMedidorTotal.text = "L"
+        }
+
+        //val args = intent.extras
+        //val total = args?.getInt("totalCont", 0)
+        //txtTotal.text = total.toString()
 
     }
 
