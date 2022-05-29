@@ -11,13 +11,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppBeberAgua">
         <activity
-            android:name=".contador"
-            android:exported="false"
-            android:screenOrientation="portrait"/>
+            android:name=".Cadastro"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"/>
+        <activity
+            android:name=".conta"
+            android:theme="@style/AppTheme.Toolbar" />
         <activity
             android:name=".categorias"
-            android:exported="false" />
-
+            android:theme="@style/AppTheme.Toolbar" />
         <activity
             android:name=".MainActivity"
             android:exported="true"

@@ -1,21 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-
-<androidx.drawerlayout.widget.DrawerLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/layoutMenuLateral"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start">
+
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:fitsSystemWindows="true"
-        >
-
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            tools:context=".categorias">
-
+        tools:context=".categorias">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -35,6 +32,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="56dp"
+                    android:ems="6"
                     android:gravity="center"
                     android:hint="Seu Peso(kg)"
                     android:inputType="numberDecimal"
@@ -50,6 +48,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="56dp"
                     android:layout_marginEnd="16dp"
+                    android:ems="6"
                     android:gravity="center"
                     android:hint="Sua idade"
                     android:inputType="number"
@@ -166,7 +165,7 @@
                     android:textSize="25sp" />
 
 
-                <com.google.android.material.button.MaterialButton
+                <Button
                     android:id="@+id/btn500ml"
                     style="?attr/materialButtonOutlinedStyle"
                     android:layout_width="wrap_content"
@@ -206,7 +205,7 @@
                     android:textColor="@color/white"
                     android:textSize="25sp" />
 
-                <com.google.android.material.button.MaterialButton
+                <Button
                     android:id="@+id/btn700ml"
                     style="?attr/materialButtonOutlinedStyle"
                     android:layout_width="wrap_content"
@@ -223,9 +222,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:layout_margin="10dp"
+                android:layout_marginBottom="16dp"
                 android:background="@color/teal_200"
-                android:padding="10dp"
-                android:layout_marginBottom="16dp">
+                android:padding="10dp">
 
                 <ImageView
                     android:layout_width="150dp"
@@ -247,7 +246,7 @@
                     android:textColor="@color/white"
                     android:textSize="25sp" />
 
-                <com.google.android.material.button.MaterialButton
+                <Button
                     android:id="@+id/btn1l"
                     style="?attr/materialButtonOutlinedStyle"
                     android:layout_width="wrap_content"
@@ -260,18 +259,16 @@
 
             </RelativeLayout>
 
-
         </LinearLayout>
-        </ScrollView>
-        <com.google.android.material.navigation.NavigationView
-            android:id="@+id/menu_lateral"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_gravity="start"
-            android:fitsSystemWindows="true"
-            app:headerLayout="@layout/menu_lateral_cabecalho"
-            app:menu="@menu/menu_lateral">
-        </com.google.android.material.navigation.NavigationView>
+    </ScrollView>
 
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/header"
+        app:menu="@menu/menu_lateral" />
 
 </androidx.drawerlayout.widget.DrawerLayout>

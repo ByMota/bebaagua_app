@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1621101674",
+    "project_id": "appbeberagua",
+    "storage_bucket": "appbeberagua.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1621101674:android:4f7ea56cab4e9abb35ce13",
+        "android_client_info": {
+          "package_name": "br.com.viniciusmorici.appbeberagua"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1621101674-l43bp68c1on08qumr625ubrbjk6jt82p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCR--cRlYARsawO7al39rSlt36SmbxYNA8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1621101674-l43bp68c1on08qumr625ubrbjk6jt82p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
